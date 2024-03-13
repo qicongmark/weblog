@@ -1,0 +1,22 @@
+
+<form class="search-form" style="margin-top:15rpx;">
+  <view class="search-group">
+    <view class="search-group-view">
+      <input auto-focus="{{true}}" focus="{{true}}" bindinput="changeKey" class="form-control" maxlength="15" value="{{key}}"/>
+      <button class="search-btn" bindtap="doSearch" type="primary" size="mini" style="background-color:#0DA4FD;right:1px;height:30px;line-height:30px;width:80px;">检 索</button>
+    </view>
+  </view>
+</form>
+
+<view class="container">
+  <view class="article-item" wx:for="{{articles}}" wx:key="key">
+    <navigator url="/pages/article/article?id={{item._id}}" hover-class="none">
+      <rich-text class="article-name" nodes="{{item.title}}"></rich-text>
+      <view style="margin-top: 6rpx;">
+        <rich-text class="article-desc" nodes="{{item.desc}}"></rich-text>
+      </view>
+    </navigator>
+  </view>
+
+</view>
+

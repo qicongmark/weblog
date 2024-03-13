@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/article/article",
+    "pages/manage/manage",
+    "pages/manage/articleManage/articleManage",
+    "pages/manage/articleAdd/articleAdd",
+    "pages/manage/articleEdit/articleEdit",
+    "pages/search/search"
+    
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "位置信息将用于您的地址设置"
+    }
+  },
+  "window": {
+    "backgroundColor": "#FFF",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#b5d9f8",
+    "navigationBarTitleText": "云博客",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#2b2b2b",
+    "selectedColor": "#2b2b2b",
+    "backgroundColor": "#F6F6F6",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icon/index.png",
+        "selectedIconPath": "images/icon/index-select.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/manage/articleManage/articleManage",
+        "iconPath": "images/icon/user.png",
+        "selectedIconPath": "images/icon/user-select.png",
+        "text": "博客管理"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

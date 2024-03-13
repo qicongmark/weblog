@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<navbar title="云博客"></navbar>
+
+<swiper class="banner" 
+  indicator-dots="true" 
+  autoplay="true" 
+  circular="true" 
+  indicator-color="#fff" 
+  indicator-active-color="#42c642">
+
+  <swiper-item wx:for="{{banners}}" wx:key="key">
+    <navigator hover-class="none" url="/pages/article/article?id={{item._id}}">
+      <image bindload="loadimg" src="{{item.img}}" mode="aspectFill"></image>
+    </navigator>
+  </swiper-item>
+</swiper>
+
+<view class="container">
+  <view class="split-title split-title-row">
+    <view bindtap="toSearch"  class="nav-bar-search">
+      <input class="nav-bar-input" ></input>
+    </view>
+    <navigator url="/pages/search/search">检 索</navigator>
+  </view>
+  <view class="list-container">
+    <navigator hover-class="none" url="/pages/article/article?id={{item._id}}" wx:key="key" wx:for="{{articles}}" >
+      <view class="l-item">
+        <image wx:if="{{item.img}}" mode="aspectFill" src="{{item.img}}"></image>
+        <image wx:else mode="aspectFill" src="../../images/default.png"></image>
+        <view class="l-item-content">
+          <view class="l-item-name" style="font-weight: bold;">{{item.title}}</view>
+          <view class="l-item-desc">{{item.desc}}</view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>

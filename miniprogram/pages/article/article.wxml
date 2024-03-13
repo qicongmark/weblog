@@ -1,0 +1,22 @@
+
+<view class="container" wx:if="{{article}}">
+  <view class="title">
+    <text>{{article.title}}</text>
+    <view class="comment">
+      <text>阅读量：{{article.read}}</text>
+    </view>
+  </view>
+  
+  <view class="content">
+    <image wx:if="{{article.img}}" src="{{article.img}}" mode="widthFix" style="width: 100%;margin-bottom:30rpx;border-radius: 6rpx;"></image>
+    <rich-text nodes="{{article.content}}"></rich-text>
+  </view>
+
+  <view class="footer">
+    <button open-type="share" class="tool" style="width: auto;">
+      <image src="../../images/icon/share.png"></image>
+      转发给好友或群
+    </button>
+  </view>
+
+</view>
